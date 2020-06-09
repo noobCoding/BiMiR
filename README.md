@@ -8,7 +8,7 @@ If BiMiR helps your researches, please let the others know! You can cite us as:
 **SYoon, HCTNguyen, WJo, JKim, SChi, JPark, SKim, DNam. Biclustering analysis of transcriptome big data identifies condition-specific microRNA targets. Nucleic Acids Research, 2019.DOI:https://doi.org/10.1093/nar/gkz139**
 
 # Contact information
-Dr. Dougu Nam - dougnam@unist.ac.kr
+Dr. Dougu Nam - dougnam@unist.ac.kr or
 Dr. Hai Nguyen - hainct@unist.ac.kr
 
 # Website: 
