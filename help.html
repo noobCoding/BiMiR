@@ -1,0 +1,359 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>BiMiR - miRNA Biclusters </title>
+<link href="./index_files/base.css" type="text/css" rel="stylesheet">
+<style>
+html, body {
+    height:100%;
+    width:100%;    
+    padding:0;
+}
+.container {
+	position:relative;
+	top: 180;
+	width: 90%;
+    height:100%;		
+	margin: 0 auto;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: none;
+   color: none;
+   text-align: left;
+}
+.header {
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   background-color: none;
+   color: none;
+   text-align: left;
+}
+
+.content{
+	
+}
+
+</style>
+</head>
+
+<body bgcolor="#ffffff" height="100%" width="100%" link="#000000" vlink="#000000" alink="#000000">
+<div class="header">
+<table border="0" width="100%"  style="border-spacing:0;" >
+  <tbody>
+  <tr valign="top" colspan="5" style="background-color:rgb(0, 0, 0);">
+  <td height="20"> </td>
+ </tr>
+  <tr valign="top" colspan="4" style="background-color:rgb(3, 45, 67);">
+    <th align='left' valign='middle' width="100%" colspan="100%" style="font-family:caribri;font-size:120%;font-weight:bold;color:#ffffff;background-color:rgb(3, 45, 67);height:80;padding:10;padding-left:15;">
+	<font style="font-family:Arial;font-size:300%;font-weight:bold;color:#ffffff;background-color:rgb(3, 45, 67);color:rgb(20, 200, 200);">BI</font>
+	<font style="font-family:Arial;font-size:300%;font-weight:bold;color:#ffffff;background-color:rgb(3, 45, 67); ">MIR</font><font style="font-family:Arial;"> 
+	Condition-specific miRNA target prediction database</font></th>
+ </tr>
+ <tr >  
+    <td style="padding:10;padding-left:30;background-color:white;">
+      <a class="topMenu" href="http://btool.org/bimir_dir/index.html" style="font-size:200%;font-weight:normal;">Home</a> <font style="font-size:200%;font-weight:normal;"> |       </font>
+      <a class="topMenu" href="http://btool.org/bimir_dir/default.php" style="font-size:200%;font-weight:normal;">Search</a> <font style="font-size:200%;font-weight:normal;"> |       </font>
+      <a  class="topMenu" href="http://btool.org/bimir_dir/download.html"style="font-size:200%;font-weight:normal;text-decoration:none;">Download</a> <font style="font-size:200%;font-weight:normal;"> |       </font> 
+	  <a class="topMenu" href="http://btool.org/bimir_dir/help.html"style="font-size:200%;font-weight:normal;">Help</a>  
+   </td>         
+   <td style="background-color:white;" align='right' valign='middle'  > 
+   <a href='https://clustrmaps.com/site/1aneh'  title='Visit tracker'><img width="140"  height="80"  src='//clustrmaps.com/map_v2.png?cl=ffffff&w=150&t=tt&d=p7rMVHU-6NMgIb_CzJFxjcboIQd8GHyaJrwr-6mAlLg&co=0049b8&ct=ffffff'/></a>   
+   </td>
+   </tr>   
+   <tr valign="top" colspan="4" style="background-color:rgb(130, 130, 130);"><td height="3"  colspan="4"> </td>  </tr>
+ </table>
+ </div>
+  
+<div class="container">
+<br><br>
+<table>
+<tr>
+<td>
+<h2 style='font-family:"Verdana",sans-serif;color:rgb(210, 0, 60);'>Notice</h2>
+</td>
+</tr>
+<tr>
+<td>
+<ul>
+	<li> BiMIR server is currently managed externally. Please, contact us immediately if the server does not yield any search results. </li>	
+	<li> Thank you very much!</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<h2 style='font-family:"Verdana",sans-serif;color:rgb(210, 0, 60);'>Search Options</h2>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="./help_files/so.PNG">
+</td>
+</tr>
+
+<tr>
+<td>
+<h4 style="color:blue;"> miRNA </h4>
+<ul>
+	<li> A list of all available micro-RNAs in BiMiR database. </li>
+	<li> Specific one micro-RNA to limit the searching range.</li>
+	<li> Leave it blank to display all available biclusters in database. </li>
+</ul>
+</td>
+</tr> 
+
+<tr>
+<td>
+<h4 style="color:blue;"> Organ/Tissue </h4>
+<ul>
+	<li> A list of all organs/tissues in BiMiR database.</li>
+	<li> Choose one organ/tissue to specific your interest.</li>
+	<li> Capability to combine with miRNA session for searching.</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<h4 style="color:blue;"> Disease </h4>
+<ul>
+	<li> A list of all associated diseases in BiMiR database.</li>
+	<li> Choose one disease specific your interest.</li>
+	<li> Capability to combine with miRNA session for searching.</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<h4 style="color:blue;"> Keywords & Specific Genes </h4>
+<ul>
+	<li> An advanced search option.</li>
+	<li> Input any keyword of interest to retrieve related conditions and biclusters.</li>
+	<li> A prefix ‘+’ will emphasize your interest to ‘must have’ degree.</li>
+	<li> A prefix ‘-‘ indicates ‘not interested’ term.</li>
+	<li> Put interested phrase between “…” to search for exact desire phrase.</li>
+	<li> Capability to combine with miRNA session for searching.</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<br><br>
+<h2 style='font-family:"Verdana",sans-serif;color:rgb(210, 0, 60);'>Search Results </h2>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="./help_files/sr.PNG">
+</td>
+</tr>
+<tr>
+
+<tr>
+<td>
+<h4 style="color:blue;"> Name </h4>
+<ul>
+	<li> Name and link to details of a bicluster.	</li>
+</ul>
+</td>
+</tr> 
+
+<tr>
+<td>
+<h4 style="color:blue;"> miRNA </h4>
+<ul>
+	<li> Name of microRNA including this bicluster.</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<h4 style="color:blue;"> Fold </h4>
+<ul>
+	<li> Cut-off threshold of a bicluster.	</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<h4 style="color:blue;"> Size </h4>
+<ul>
+	<li> Size of bicluster presented as (number_of_conditions x number_of_targets).</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<h4 style="color:blue;"> Validated </h4>
+<ul>
+	<li> The fraction of validated evidence (miRTarBase).</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<h4 style="color:blue;"> Proportion </h4>
+<ul>
+	<li> Available in searching with ‘Organ/Tissue’ and ‘Disease’ specification.</li>
+	<li> Indicate the frequency of interested organ/tissue/disease appearing in this bicluster.</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<h4 style="color:blue;"> Targets </h4>
+<ul>
+	<li> List of associated targets	</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<h4 style="color:blue;"> Enriched Pathways </h4>
+<ul>
+	<li> List of significant enriched pathways (adjusted p-value < 0.1) from C2 and C5 sets.</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<br><br>
+<h2 style='font-family:"Verdana",sans-serif;color:rgb(210, 0, 60);'>Bicluster Details</h2>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<img src="./help_files/bd.PNG">
+</td>
+</tr>
+<tr>
+
+<tr>
+<td>
+<h4 style="color:blue;"> Bicluster brief information </h4>
+<ul>
+	<li> Bicluster name is in BLUE.</li>
+	<li> Name of miRNA is in GREEN.</li>
+	<li> Fold number is in RED.</li>
+</ul>
+</td>
+</tr> 
+
+<tr>
+<td>
+<h4 style="color:blue;"> Bicluster map </h4>
+<ul>
+	<li> A heat map indicates activation which is scaled between RED and GREEN.</li>
+	<li> Each row has a link ta specific condition series from NCBI GEO.</li>
+	<li> Each column has a link ttarget/gene description from Gdatabase.</li>
+	<li> Degree of each node (target) in interactive network is shown.</li>
+	<li> Evidence of tests are alsindicated.</li>
+	<li> A link to network visualization of this bicluster is highlighted in VIOLET.</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<h4 style="color:blue;"> Keyword cloud </h4>
+<ul>
+	<li> High frequency terms are extracted from all conditions tbriefly describe the bicluster.</li>
+	<li> Each term owns a link tGoogle definition.</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<h4 style="color:blue;"> Experimental Conditions </h4>
+<ul>
+	<li> Brief descriptions of experiment conditions are alsprovided for quick reference.</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<h4 style="color:blue;"> Functional Enrichment Test </h4>
+<ul>
+	<li> List of all significant enriched pathways from C2 and C5 sets.	</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<br><br>
+<h2 style='font-family:"Verdana",sans-serif;color:rgb(210, 0, 60);'>Network Visualization</h2>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="./help_files/nv.PNG">
+</td>
+</tr>
+<tr>
+ 
+<tr>
+<td>
+<h4 style="color:blue;"> Bicluster Information </h4>
+<ul>
+	<li> Bicluster name is in BLUE.</li>
+	<li> Name of miRNA is in GREEN.</li>
+	<li> Fold number is in RED.</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<h4 style="color:blue;"> Network </h4>
+<ul>
+	<li> A color scale indicates the MAXIMUM and MINIMUM connections in this network.</li>
+	<li> Color of a gene node is scaled based on its degree (connection count).</li>
+	<li> Thickness of an edge indicates the strength of the connection.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+
+<br><br>
+<a href="mailto:dougunam@gmail.com" target="_blank"><img src="./index_files/mail.png" align="middle" border="0" ></a>&nbsp;&nbsp;
+<br><br><br><br><br>
+
+</div>
+
+
+<div class="footer">  
+<table border="0" width="100%" colspan="100%" style="border-spacing:0;" >
+ <tr valign="top" style="background-color:rgb(20, 120, 120);">	
+	<td height="15"> </td>    
+ </tr>  
+ <tr valign="top" colspan="2" style="background-color:rgb(3, 45, 67);">
+  <td height="30"> </td>    
+ </tr>
+ </table> 
+</div>
+</body></html>
